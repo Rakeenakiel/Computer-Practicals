@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### Import Cell
+# ### Import the necesarry packages
 
 # In[1]:
 
@@ -17,7 +17,7 @@ import os
 
 # In[2]:
 
-
+#a function that extracts the values of year as a list 
 def year(url):
     r = requests.get(url)
     html_doc = r.text
@@ -32,6 +32,7 @@ def year(url):
     qwe = [i.rstrip() for i in asd]
     qwe[19]= "1999-00"
     return qwe
+#a function that extracts the values of Number of employees list 
 def People(url):
     r = requests.get(url)
     html_doc = r.text
@@ -55,6 +56,7 @@ def People(url):
         e = d.replace(",", "")
         anj.append(int(e))
     return anj
+#a function that extracts the values of Passengers as a list 
 def Pass(url):
     r = requests.get(url)
     html_doc = r.text
@@ -76,7 +78,7 @@ def Pass(url):
 
 # In[3]:
 
-
+#creating the Data Frame 
 a = "https://corporate.ryanair.com/about-us/history-of-ryanair/"
 df = pd.DataFrame()
 df['Year']= year(a)
@@ -149,7 +151,7 @@ print(df)
 
 
 # In[11]:
-
+#to export the table as a .xlsx file
 
 directory = r"C:\Users\rakee\OneDrive\Desktop\DS\Computer practicals rug"
 file = "Ryanair2.xlsx"
