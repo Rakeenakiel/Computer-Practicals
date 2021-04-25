@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import geopandas as gpd
 import country_converter as coco
-from shapely.geometry import Point
 import adjustText as aT
 #importing data
 df = pd.read_excel(r"C:\Users\rakee\OneDrive\Desktop\DS\Computer practicals rug\2\Visualizations\Code\Data\Governance Effectivenes 2017.xlsx")
